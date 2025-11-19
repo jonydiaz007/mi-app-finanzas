@@ -11,9 +11,9 @@ api_key = st.text_input("Google API Key:", type="password")
 
 if api_key:
     try:
-       genai.configure(api_key=api_key)
+        genai.configure(api_key=api_key)
         
-        # Instrucciones simples para evitar errores de formato
+        # Revisa esta sección (Lineas 16-19)
         model = genai.GenerativeModel(
             "gemini-1.5-flash",
             system_instruction="Eres un experto en finanzas. Responde breve y útil."
@@ -40,4 +40,5 @@ if api_key:
 
     except Exception as e:
         st.error(f"Error: {e}")
+
 
