@@ -1,1 +1,1 @@
-# mi-app-finanzas
+app-finanzas-gemini
