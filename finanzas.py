@@ -1,5 +1,5 @@
 import streamlit as st
-import google.generativeai as genai
+import google.genai as genai
 
 st.set_page_config(page_title="Asesor Financiero", page_icon="💰")
 
@@ -11,7 +11,7 @@ api_key = st.text_input("Google API Key:", type="password")
 
 if api_key:
     try:
-        genai.configure(api_key=api_key)
+       genai.configure(api_key=api_key)
         
         # Instrucciones simples para evitar errores de formato
         model = genai.GenerativeModel(
@@ -40,3 +40,4 @@ if api_key:
 
     except Exception as e:
         st.error(f"Error: {e}")
+
